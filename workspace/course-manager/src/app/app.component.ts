@@ -1,13 +1,17 @@
-import { Component } from '@angular/core';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
 
-@Component({
-  selector: 'app-root', // gera um tag que pode ser utilizada em qlq lugar
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppComponent {
-  title = 'course-manager'; // atrib. do componente
-
-
-  name: String = 'Fernando'
-}
+export class AppModule { }
