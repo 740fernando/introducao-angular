@@ -6,7 +6,6 @@ import { Component, OnChanges, Input } from "@angular/core";
     styleUrls: ['./star.component.css']
 })
 export class StarComponent implements OnChanges {
-
     // Recebe valor de um componente externo
     @Input()
     rating: number= 0;
