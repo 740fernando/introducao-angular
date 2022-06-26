@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "font-awesome": "^4.7.0",
     "serve": "^13.0.2"
   }
 }
