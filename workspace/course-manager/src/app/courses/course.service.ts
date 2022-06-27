@@ -1,4 +1,6 @@
+import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { Course } from "./course";
 
 // Declara p/ angular que a classe é elegível p/ inj. depedencia
@@ -7,8 +9,12 @@ import { Course } from "./course";
 })
 export class CourseService {
 
-    retriveAll(): Course[] {
-        return COURSES;
+    private courseUrl: string = 'http://localhost:3100/api/courses';
+
+    constructor(private httpClient: HttpClient){ }
+
+    retrieveAll(): Observable<Course[]> {
+        return this.httpClient.get<Course[]>(this.courseUrl);
     } 
     
     retrieveById(id: number): Course{
