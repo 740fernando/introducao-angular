@@ -7,7 +7,9 @@ import { CourseService } from "./course.service";
     templateUrl: './course-info.component.html'
 })
 export class CourseInfoComponent implements OnInit {
-
+    title = 'course-manager'; // atrib. do componente
+    name: String = 'Fernando'
+    
     course!: Course;
 
     constructor(private activatedRoute: ActivatedRoute, private courseService: CourseService){}
