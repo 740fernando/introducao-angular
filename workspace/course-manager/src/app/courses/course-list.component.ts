@@ -6,7 +6,7 @@ import { CourseService } from "./course.service";
     templateUrl: "./course-list.component.html"
 })
 export class CourseListComponent implements OnInit {
- 
+
     filteredCourses: Course[] = [];
 
     _courses: Course[] = [];
