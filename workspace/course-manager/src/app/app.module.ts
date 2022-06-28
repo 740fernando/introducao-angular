@@ -5,15 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { Error404Component } from './erro-404/erro-404.component';
 import { CourseModule } from './courses/course-module';
 import { CoreModule } from './component/core.module';
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Error404Component
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -23,9 +21,6 @@ import { CoreModule } from './component/core.module';
     RouterModule.forRoot([ //Navega entre os menus
         {
           path: '', redirectTo: 'courses', pathMatch:'full' // rota '' padrao do angular 
-        },
-        {
-          path: '**', component:Error404Component // rota '**' 
         }
     ])
   ],
